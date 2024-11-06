@@ -1,0 +1,202 @@
+.sub_title.resume {
+  text-transform: uppercase;
+  @include font(poppins, 17px, 600);
+  color: var(--secondary-color);
+  @include flex(center, flex-start, row, 20px);
+
+  svg {
+    width: 28px;
+    height: 28px;
+    color: var(--primary-color);
+  }
+}
+
+.content.timeline {
+  @media (max-width: 768px) {
+    > {
+      .column {
+        &:nth-child(2) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+      }
+    }
+  }
+}
+
+.content.skills {
+  @media (max-width: 768px) {
+    > {
+      .column {
+        &:nth-child(2) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+        &:nth-child(6) {
+          order: 7;
+        }
+        &:nth-child(8) {
+          order: 8;
+        }
+      }
+    }
+  }
+}
+
+.column.resume_title {
+  padding: 20px 30px;
+}
+
+.duration {
+  --current-color: var(--color-7);
+  padding: 1px 5px;
+  @include font(poppins, 14px, 400);
+  line-height: 18px;
+  color: var(--current-color);
+  border: 1px solid var(--current-color);
+  border-radius: 4px;
+  align-self: flex-start;
+
+  &.active {
+    --current-color: var(--primary-color);
+  }
+}
+
+.column.resume {
+  @include flex(flex-start, flex-start, column, 45px);
+
+  > div {
+    --current-color: var(--color-3);
+    &:has(.active) {
+      --current-color: var(--primary-color);
+    }
+
+    @include flex(flex-start, space-between, column, 10px);
+    padding-left: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      background-color: var(--current-color);
+      border-radius: 50%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 14px;
+      width: 1px;
+      height: 150%;
+      background-color: var(--color-3);
+    }
+
+    &:last-child {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 14px;
+        width: 1px;
+        height: 90%;
+        background-color: var(--color-3);
+      }
+    }
+  }
+}
+
+.institution_name {
+  @include font(poppins, 14px, 400);
+  color: var(--color-6);
+  padding-top: 5px;
+}
+
+.column.skills {
+  @include flex(flex-start, flex-start, column, 20px);
+
+  .detail_wrap {
+    width: 100%;
+    @include flex(flex-start, flex-start, column, 10px);
+    @include font(poppins, 17px, 400);
+    color: var(--color-2);
+
+    .value_bar {
+      width: 100%;
+      height: 5px;
+      background-color: var(--color-5);
+      border-radius: 10px;
+
+      > div {
+        height: 100%;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+      }
+    }
+
+    .dot_bar {
+      width: 100%;
+      @include flex(center, space-between);
+
+      > .dot {
+        width: 14px;
+        height: 14px;
+        background-color: var(--color-5);
+        border-radius: 50%;
+
+        &.fill {
+          background-color: var(--primary-color);
+        }
+      }
+    }
+
+    .round_bar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      padding: 3px;
+
+      > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: var(--bg-light);
+        @include flex(center, center);
+      }
+    }
+  }
+
+  &.coding {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 0;
+
+    .detail_wrap {
+      width: 50%;
+      @include flex(center, center, column, 15px);
+    }
+  }
+}
+
+ul.knowledges {
+  list-style: none;
+
+  li {
+    padding: 7px 0;
+    @include font(poppins, 16px, 400);
+    color: var(--color-2);
+    @include flex(center, flex-start, row, 15px);
+
+    svg {
+      color: var(--primary-color);
+    }
+  }
+}
