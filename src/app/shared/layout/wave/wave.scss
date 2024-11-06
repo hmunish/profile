@@ -1,0 +1,57 @@
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+#wave-box {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1b2055 !important;
+  background: #0e6cc4;
+}
+
+#wave-wrapper {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg);
+  left: 0;
+
+  > div {
+    opacity: 0.4;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    width: 1500px;
+    height: 1300px;
+    margin-left: -150px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 7s infinite linear;
+
+    background-color: #c0d1eb !important;
+  }
+
+  div.two {
+    animation: drift 3s infinite linear;
+    opacity: 0.1;
+    background: #000;
+    position: fixed;
+  }
+
+  div.three {
+    animation: drift 7.5s infinite linear;
+    position: fixed;
+    opacity: 0.65;
+    background-color: #f1ff00 !important;
+  }
+}
