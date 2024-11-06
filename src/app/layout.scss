@@ -24,6 +24,7 @@ main {
   background-color: var(--primary-bg-color);
   padding: 5vh 3vw;
   @include flex(center, center);
+  overflow: hidden;
 
   @media (max-width: 1150px) {
     padding: 0;
