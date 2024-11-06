@@ -1,0 +1,63 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --mouse-animation-shape-bg-clr: rgba(120, 204, 109, 0.25);
+  background: rgba(120, 204, 109, 0);
+  border-color: rgba(20, 58, 170, 1);
+
+  --white: #ffffff;
+  --black: #000000;
+  --primary-bg-color: #1b2055;
+  --primary-color: #143aaa;
+  --secondary-color: #323232;
+  --color-1: #fefefe;
+  --color-2: #646464;
+  --color-3: #dddddd;
+  --color-4: rgba(221, 221, 221, 0.5);
+  --color-5: #eeeeee;
+  --color-6: #999999;
+  --color-7: #9a9a9a;
+  --bg-light: #f8f6f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.link {
+  cursor: pointer;
+}

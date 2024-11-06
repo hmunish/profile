@@ -1,0 +1,71 @@
+.column.map {
+  flex-basis: 100%;
+
+  iframe {
+    width: 100%;
+    height: 240px;
+    border: none;
+  }
+}
+
+.column.contact_detail {
+  padding: 1px 25px;
+}
+
+.content.contact_form {
+  div.column {
+    border: none;
+    padding: 20px 25px;
+
+    input,
+    textarea {
+      width: 100%;
+      height: 50px;
+      padding: 0 15px;
+      color: #323232;
+      @include font(poppins, 16px, 500);
+      background: none;
+      border: none;
+      border: 2px solid #eee;
+      resize: none;
+      outline: none;
+      transition: all 0.3s ease 0s;
+
+      &:focus {
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+      }
+    }
+
+    textarea {
+      padding-top: 15px;
+      height: auto;
+    }
+  }
+
+  .column.message_field {
+    flex-basis: 100%;
+    border: none;
+    padding-top: 0;
+  }
+
+  button {
+    width: 200px;
+    height: 50px;
+    background: var(--color-5);
+    border: none;
+    color: var(--secondary-color);
+    @include font(poppins, 14px, 600);
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+
+    @include flex(center, center, row, 10px);
+
+    &:hover {
+      color: var(--primary-color);
+      gap: 15px;
+    }
+  }
+}

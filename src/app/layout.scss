@@ -1,0 +1,31 @@
+#mouse_animation_shape {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.29s ease-out, background-color 0.7s, border-color 0.7s;
+  border-radius: 100%;
+  background-color: var(--mouse-animation-shape-bg-clr);
+  border: 1px solid transparent;
+  z-index: 999;
+  pointer-events: none;
+
+  &.on_link {
+    width: 80px;
+    height: 80px;
+    background: rgba(120, 204, 109, 0);
+    border-color: rgba(20, 58, 170, 1);
+  }
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-bg-color);
+  padding: 5vh 3vw;
+  @include flex(center, center);
+
+  @media (max-width: 1150px) {
+    padding: 0;
+  }
+}
