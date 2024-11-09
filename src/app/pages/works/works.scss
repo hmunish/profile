@@ -9,6 +9,7 @@
   padding-bottom: 20px;
   flex: 1;
   @include flex(center, flex-end, row, 25px);
+  flex-wrap: wrap;
   @include font(poppins, 15px, 400);
   color: var(--color-2);
   cursor: pointer;
