@@ -37,6 +37,11 @@
   width: 100%;
   height: 37%;
   @include flex(center, space-between, column);
+
+  
+  @media (min-width: 1150px) {
+    height: 27%;
+  }
 }
 
 #title_wrapper {
@@ -54,6 +59,10 @@
     line-height: 30px;
     color: var(--primary-color);
   }
+
+  @media (min-width: 1150px) {
+    margin-top: -45px;
+  }
 }
 
 #social_icons_wrapper {
@@ -66,6 +75,10 @@
     &:hover {
       color: var(--primary-color);
     }
+  }
+  
+  @media (min-width: 1150px) {
+    margin-top: -25px;
   }
 }
 

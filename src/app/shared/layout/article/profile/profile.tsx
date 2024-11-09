@@ -57,7 +57,7 @@ const Profile: React.FC<ProfileProps> = function ({ onScrollToContent }) {
 
   return (
     <section id="profile">
-      <img src="/assets/images/munish.jpg" id="profile-img" />
+      <img src="/assets/images/munish.png" id="profile-img" />
       <div id="details_wrapper">
         <div id="title_wrapper">
           <h1>Munish Halai</h1>
