@@ -10,7 +10,10 @@ export default function Article({
 }>) {
   const contentWrapperRef = useRef<HTMLDivElement>(null);
   const scrollToContent = () => {
-    // contentWrapperRef.current?.scrollIntoView({ behavior: "smooth" });
+    const yOffset = -62;
+    const y = (contentWrapperRef.current?.getBoundingClientRect().top || 0) + window.pageYOffset + yOffset;
+    contentWrapperRef.current?.scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({ top: y, behavior: "smooth" });
   };
   return (
     <section id="article">
