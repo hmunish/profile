@@ -10,7 +10,7 @@ export default function Article({
 }>) {
   const contentWrapperRef = useRef<HTMLDivElement>(null);
   const scrollToContent = () => {
-    contentWrapperRef.current?.scrollIntoView({ behavior: "smooth" });
+    // contentWrapperRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <section id="article">
