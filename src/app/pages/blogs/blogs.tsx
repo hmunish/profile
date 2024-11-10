@@ -40,7 +40,7 @@ export default function Blogs({ classNames }: { classNames: string[] }) {
   return (
     <div className={`page ${classNames}`}>
       <div className="section with_nav">
-        <h1 className="title">Blogs</h1>
+        <p className="title">Blogs</p>
         <ul id="blog_accordian_nav">
           {accordian.map((tab) => (
             <li
@@ -64,7 +64,7 @@ export default function Blogs({ classNames }: { classNames: string[] }) {
                   target="_blank"
                   key={blog.type + blog.title}
                 >
-                  <img src={`/assets/images/blogs/${blog.image}`} />
+                  <img alt={blog.title} src={`/assets/images/blogs/${blog.image}`} />
                   <p className="blog_date">{blog.date}</p>
                   <p className="sub_title blog">{blog.title}</p>
                   <p className="blog_description">{blog.description}</p>

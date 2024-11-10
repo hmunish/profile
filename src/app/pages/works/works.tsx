@@ -95,7 +95,7 @@ export default function Works({ classNames }: { classNames: string[] }) {
   return (
     <div className={`page ${classNames}`}>
       <div className="section with_nav">
-        <h1 className="title">Works</h1>
+        <p className="title">Works</p>
         <ul id="work_accordian_nav">
           {accordian.map((tab) => (
             <li
@@ -120,7 +120,7 @@ export default function Works({ classNames }: { classNames: string[] }) {
                   key={work.type + work.title}
                 >
                   {work.image && (
-                    <img src={`/assets/images/works/${work.image}`} />
+                    <img src={`/assets/images/works/${work.image}`} alt={work.title}/>
                   )}
                   {work.embedUrl && (
                     <iframe

@@ -14,7 +14,7 @@ export default function Contact({ classNames }: { classNames: string[] }) {
   return (
     <div className={`page ${classNames}`}>
       <div className="section">
-        <h1 className="title">Get in Touch</h1>
+        <p className="title">Get in Touch</p>
         <div className="content">
           <div className="column map">
             <iframe
@@ -40,7 +40,7 @@ export default function Contact({ classNames }: { classNames: string[] }) {
         </div>
       </div>
       <div className="section">
-        <h1 className="title">Contact Form</h1>
+        <p className="title">Contact Form</p>
         <form className="content contact_form">
           <div className="column">
             <input

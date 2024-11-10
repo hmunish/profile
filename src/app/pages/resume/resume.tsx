@@ -120,7 +120,7 @@ export default function Resume({ classNames }: { classNames: string[] }) {
   return (
     <div className={`page ${classNames}`}>
       <div className="section">
-        <h1 className="title">Resume</h1>
+        <p className="title">Resume</p>
         <div className="content timeline">
           <div className="column resume_title">
             <p className="sub_title resume">
@@ -169,7 +169,7 @@ export default function Resume({ classNames }: { classNames: string[] }) {
         </div>
       </div>
       <div className="section">
-        <h1 className="title">Skills</h1>
+        <p className="title">Skills</p>
         <div className="content skills">
           <div className="column resume_title">
             <p className="sub_title resume">

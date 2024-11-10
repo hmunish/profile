@@ -154,19 +154,19 @@ export default function About({ classNames }: { classNames: string[] }) {
       <div className="section">
         <h2 className="title">Clients</h2>
         <div className="content">
-          <div className="column clients">
-            <img src="assets/images/clients/kipsrestaurants_logo.png" />
-          </div>
-          <div className="column clients">
-            <img src="assets/images/clients/toproof_logo.png" />
-          </div>
-          <div className="column clients">
-            <img src="assets/images/clients/pipeit_mw_logo.jpg" />
-          </div>
-          <div className="column clients">
-            <img src="assets/images/clients/harfield_investments_logo.png" />
-          </div>
-        </div>
+  <div className="column clients">
+      <img src="/assets/images/clients/kipsrestaurants_logo.png" alt="Kips Restaurants Logo" />
+  </div>
+  <div className="column clients">
+      <img src="/assets/images/clients/toproof_logo.png" alt="Top Roof Logo" />
+  </div>
+  <div className="column clients">
+      <img src="/assets/images/clients/pipeit_mw_logo.jpg" alt="Pipeit MW Logo" />
+  </div>
+  <div className="column clients">
+      <img src="/assets/images/clients/harfield_investments_logo.png" alt="Harfield Investments Logo" />
+  </div>
+</div>
       </div>
 
       {/* <div className="section">
