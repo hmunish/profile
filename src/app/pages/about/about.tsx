@@ -48,7 +48,7 @@ export default function About({ classNames }: { classNames: string[] }) {
   return (
     <div className={`page ${classNames}`}>
       <div className="section">
-        <h1 className="title">About Me</h1>
+        <p className="title">About Me</p>
         <div className="content">
           <p className="column description">
             <strong>{details.title}</strong>
