@@ -60,19 +60,19 @@ const accordianWorks = [
   // },
   {
     title: "Talin - Bulk Email System",
-    image: "talin-snap-1.png",
+    image: "talin-snap-1.PNG",
     liveUrl: "https://talin.pinakinfund.us",
     type: WorkType.WebApps,
   },
   {
     title: "Eprocurement - Quotation & Purchase Order Management System",
-    image: "eprocure-snap-1.png",
+    image: "eprocure-snap-1.PNG",
     liveUrl: "https://eprocure.squincy.com",
     type: WorkType.WebApps,
   },
   {
     title: "Healic - Hospital Management System",
-    image: "healic-snap-1.png",
+    image: "healic-snap-1.PNG",
     liveUrl: "https://web.healic.in",
     type: WorkType.WebApps,
   },
