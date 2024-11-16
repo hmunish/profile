@@ -76,7 +76,7 @@ const Profile: React.FC<ProfileProps> = function ({ onScrollToContent }) {
           ))}
         </div>
         <div id="cta-wrapper">
-          <a className="link" href="./assets/images/munish-resume.png" target="_blank">
+          <a className="link" href="./assets/documents/resume.pdf" target="_blank">
             Download CV <FaDownload />
           </a>
           <a
