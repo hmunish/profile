@@ -6,8 +6,8 @@ import Preloader from "./shared/layout/preloader/preloader";
 import { Inter } from "next/font/google";
 import { MouseEvent, useCallback, useRef } from "react";
 import Wave from "./shared/layout/wave/wave";
-import Head from "next/head";
 import { NavigationStateProvider } from "./shared/context/navigationState";
+import { HostStateProvider } from "./shared/context/hostState";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,9 +47,11 @@ export default function RootLayout({
         <Wave></Wave>
         <main>
           <div ref={mouseAnimationShape} id="mouse_animation_shape"></div>
-          <NavigationStateProvider>
-            <Article>{children}</Article>
-          </NavigationStateProvider>
+          <HostStateProvider>
+            <NavigationStateProvider>
+              <Article>{children}</Article>
+            </NavigationStateProvider>
+          </HostStateProvider>
         </main>
       </body>
     </html>
