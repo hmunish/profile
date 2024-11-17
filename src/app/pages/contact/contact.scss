@@ -69,3 +69,46 @@
     }
   }
 }
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.message {
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 1;
+  animation: fadeOut 3s ease-in-out forwards;
+  position: absolute;
+  padding: 3px 1px 3px 5px;
+}
+
+.success {
+  color: #155724;
+}
+
+.error {
+  color: #bf5c6c;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

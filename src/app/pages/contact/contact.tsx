@@ -1,5 +1,26 @@
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaSpinner } from "react-icons/fa6";
 import "./contact.scss";
+import { useRef, useState } from "react";
+
+class ValidationError extends Error {
+  code?: number;
+  context?: string;
+
+  constructor(message: string, code?: number, context?: string) {
+    super(message); // Pass the message to the parent Error class
+    this.code = code;
+    this.context = context;
+
+    // Set the name of the error to be the class name (optional)
+    this.name = this.constructor.name;
+
+    // Capture stack trace (optional but useful)
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor);
+    }
+  }
+}
+
 
 const details = {
   labels: [
@@ -11,6 +32,64 @@ const details = {
 };
 
 export default function Contact({ classNames }: { classNames: string[] }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [status, setStatus] = useState<{ success: boolean | null; message: string }>({
+    success: null,
+    message: '',
+  });
+
+  const currentTimeoutId = useRef<NodeJS.Timeout | null>(null);
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      for(let k in formData){
+        if(formData[k as keyof typeof formData]?.trim()?.length < 1){
+          throw new ValidationError('Invalid form fields!')
+        }
+      }
+      setIsSubmitting(true);
+      const res = await fetch("https://getform.io/f/bnllxoqb", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+      });
+      if(currentTimeoutId.current){
+        clearTimeout(currentTimeoutId.current)
+      }
+      if (!res.ok) {
+        throw new Error();
+      }
+      setStatus({ success: true, message: 'Your message has been sent successfully! I’ll get back to you shortly' });
+    } catch(err){
+      if (err instanceof ValidationError) {
+        setStatus({ success: false, message: err.message });
+      } else {
+        setStatus({ success: false, message: 'Oops! Something went wrong while sending your message. Please try again later.' });
+      }
+    } finally {
+      setIsSubmitting(false);
+      currentTimeoutId.current = setTimeout(() => {
+        setStatus({success: null, message: ''})
+    }, 3500)
+    }
+  };
+
+
   return (
     <div className={`page ${classNames}`}>
       <div className="section">
@@ -41,21 +120,26 @@ export default function Contact({ classNames }: { classNames: string[] }) {
       </div>
       <div className="section">
         <p className="title">Contact Form</p>
-        <form className="content contact_form">
+        <form className="content contact_form" onSubmit={handleSubmit}>
           <div className="column">
+          <input type="hidden" name="_gotcha" style={{ display: "none !important" }} />
             <input
               type="text"
-              name="fullName"
+              name="name"
               placeholder="Full Name"
               required
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
           <div className="column">
             <input
               type="email"
-              name="emailId"
+              name="email"
               placeholder="Email Address"
               required
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
           <div className="column message_field">
@@ -64,12 +148,21 @@ export default function Contact({ classNames }: { classNames: string[] }) {
               placeholder="Your Message"
               name="message"
               required
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
+        {status.message && (
+        <p className={`message ${status.success ? 'success' : 'error'}`}>
+          {status.message}
+        </p>
+      )}
           </div>
           <div className="column">
-            <button type="submit">
-              Send Message
-              <FaArrowRight />
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? <FaSpinner className="spin"/> : <>
+                Send Message
+                <FaArrowRight />
+              </>}
             </button>
           </div>
         </form>
