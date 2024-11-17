@@ -121,7 +121,7 @@ export default function Contact({ classNames }: { classNames: string[] }) {
       <div className="section">
         <p className="title">Contact Form</p>
         <form className="content contact_form" onSubmit={handleSubmit}>
-          <div className="column">
+          <div className="column name_field">
           <input type="hidden" name="_gotcha" style={{ display: "none !important" }} />
             <input
               type="text"

@@ -43,10 +43,17 @@
     }
   }
 
-  .column.message_field {
-    flex-basis: 100%;
-    border: none;
-    padding-top: 0;
+  .column {
+    &.name_field{
+      @media (max-width: 768px) {
+        padding-bottom: 0;
+      }
+    }
+    &.message_field{
+      flex-basis: 100%;
+      border: none;
+      padding-top: 0;
+    }
   }
 
   button {
