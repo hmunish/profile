@@ -58,24 +58,24 @@ const accordianWorks = [
   //   liveUrl: "https://pipeitmw.com",
   //   type: WorkType.UIUX,
   // },
-  {
-    title: "Talin - Bulk Email System",
-    image: "talin-snap-1.PNG",
-    liveUrl: "https://talin.pinakinfund.us",
-    type: WorkType.WebApps,
-  },
-  {
-    title: "Eprocurement - Quotation & Purchase Order Management System",
-    image: "eprocure-snap-1.PNG",
-    liveUrl: "https://eprocure.squincy.com",
-    type: WorkType.WebApps,
-  },
-  {
-    title: "Healic - Hospital Management System",
-    image: "healic-snap-1.PNG",
-    liveUrl: "https://web.healic.in",
-    type: WorkType.WebApps,
-  },
+  // {
+  //   title: "Talin - Bulk Email System",
+  //   image: "talin-snap-1.PNG",
+  //   liveUrl: "https://talin.pinakinfund.us",
+  //   type: WorkType.WebApps,
+  // },
+  // {
+  //   title: "Eprocurement - Quotation & Purchase Order Management System",
+  //   image: "eprocure-snap-1.PNG",
+  //   liveUrl: "https://eprocure.squincy.com",
+  //   type: WorkType.WebApps,
+  // },
+  // {
+  //   title: "Healic - Hospital Management System",
+  //   image: "healic-snap-1.PNG",
+  //   liveUrl: "https://web.healic.in",
+  //   type: WorkType.WebApps,
+  // },
   {
     title: "Harfield Investments - Animated Business Video",
     embedUrl: "https://www.youtube.com/embed/_orOY7ynqhI?si=jPSGZglyG25hksuW",
@@ -96,7 +96,7 @@ export default function Works({ classNames }: { classNames: string[] }) {
     <div className={`page ${classNames}`}>
       <div className="section with_nav">
         <p className="title">Works</p>
-        <ul id="work_accordian_nav">
+        {/* <ul id="work_accordian_nav">
           {accordian.map((tab) => (
             <li
               className={tab.value === activeTab ? "active" : ""}
@@ -106,7 +106,7 @@ export default function Works({ classNames }: { classNames: string[] }) {
               {tab.label}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
       <div className="section">
         <div className="content">
@@ -118,6 +118,7 @@ export default function Works({ classNames }: { classNames: string[] }) {
                   href={work.liveUrl}
                   target="_blank"
                   key={work.type + work.title}
+                  // rel="nofollow noreferrer"
                 >
                   {work.image && (
                     <img src={`/assets/images/works/${work.image}`} alt={work.title}/>

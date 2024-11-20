@@ -92,7 +92,8 @@ export default function About({ classNames }: { classNames: string[] }) {
             </div>
             <p className="price">
               <FaDollarSign />
-              15 <span>hour</span>
+              750
+              <span>onwards</span>
             </p>
             <ul className="package_features">
               {/* <li>A polished online presence</li> */}
@@ -114,7 +115,7 @@ export default function About({ classNames }: { classNames: string[] }) {
               }
               target="_blank"
             >
-              Order Now
+              Get Started
               <FaAngleRight />
             </a>
           </div>
@@ -125,7 +126,8 @@ export default function About({ classNames }: { classNames: string[] }) {
             </div>
             <p className="price">
               <FaDollarSign />
-              30 <span>hour</span>
+              1500
+               <span>onwards</span>
             </p>
             <ul className="package_features">
               <li>UI/UX design for user engagement</li>
@@ -144,7 +146,7 @@ export default function About({ classNames }: { classNames: string[] }) {
               }
               target="_blank"
             >
-              Order Now
+              Get Started
               <FaAngleRight />
             </a>
           </div>
