@@ -39,6 +39,9 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="mWl7NSeUeMKjAdz57opQtws18XSUe8y63rVuSRXv-JY" />
+      </head>
       <body
         className={inter.className}
         onMouseMove={(event: MouseEvent) => mouseAnimationEffect(event)}
