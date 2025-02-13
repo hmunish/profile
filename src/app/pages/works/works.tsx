@@ -29,6 +29,12 @@ const accordian = [
 
 const accordianWorks = [
   {
+    title: "Widget Zone",
+    image: "widgetzone-snap-1.png",
+    liveUrl: "https://www.widgetzone.co.in",
+    type: WorkType.WebApps,
+  },
+  {
     title: "KIPS Restaurants",
     image: "kips-snap-1.png",
     liveUrl: "https://www.kipsrestaurants.com",
@@ -121,7 +127,10 @@ export default function Works({ classNames }: { classNames: string[] }) {
                   // rel="nofollow noreferrer"
                 >
                   {work.image && (
-                    <img src={`/assets/images/works/${work.image}`} alt={work.title}/>
+                    <img
+                      src={`/assets/images/works/${work.image}`}
+                      alt={work.title}
+                    />
                   )}
                   {work.embedUrl && (
                     <iframe
