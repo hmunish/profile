@@ -30,7 +30,7 @@ const accordian = [
 const accordianWorks = [
   {
     title: "Widget Zone",
-    image: "widgetzone-snap-1.png",
+    image: "widgetzone-snap-1.PNG",
     liveUrl: "https://www.widgetzone.co.in",
     type: WorkType.WebApps,
   },
