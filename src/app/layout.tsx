@@ -56,6 +56,8 @@ export default function RootLayout({
             </NavigationStateProvider>
           </HostStateProvider>
         </main>
+
+        <script defer src="https://ec2-16-170-254-238.eu-north-1.compute.amazonaws.com/users/widgets/67adef513196b9f5e713e283/script.js" data-widget-uuid="67adef513196b9f5e713e283"></script>
       </body>
     </html>
   );
