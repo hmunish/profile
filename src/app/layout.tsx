@@ -58,11 +58,15 @@ export default function RootLayout({
               <Article>{children}</Article>
             </NavigationStateProvider>
           </HostStateProvider>
-          <button id="open-modal-btn" style="background:#000000;color:#ffffff;">
+          <button
+            id="open-modal-btn"
+            style={{ background: "#000000", color: "#ffffff" }}
+          >
             Subscribe
           </button>
         </main>
         <script
+          defer
           src="https://ec2-16-170-254-238.eu-north-1.compute.amazonaws.com/users/widgets/67b7fd7ebe51816f9c70efb9/script.js"
           data-widget-uuid="67b7fd7ebe51816f9c70efb9"
         ></script>
