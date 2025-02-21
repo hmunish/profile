@@ -40,7 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="google-site-verification" content="mWl7NSeUeMKjAdz57opQtws18XSUe8y63rVuSRXv-JY" />
+        <meta
+          name="google-site-verification"
+          content="mWl7NSeUeMKjAdz57opQtws18XSUe8y63rVuSRXv-JY"
+        />
       </head>
       <body
         className={inter.className}
@@ -55,9 +58,19 @@ export default function RootLayout({
               <Article>{children}</Article>
             </NavigationStateProvider>
           </HostStateProvider>
+          <button id="open-modal-btn" style="background:#000000;color:#ffffff;">
+            Subscribe
+          </button>
         </main>
-
-        <script defer src="https://ec2-16-170-254-238.eu-north-1.compute.amazonaws.com/users/widgets/67adef513196b9f5e713e283/script.js" data-widget-uuid="67adef513196b9f5e713e283"></script>
+        <script
+          src="https://ec2-16-170-254-238.eu-north-1.compute.amazonaws.com/users/widgets/67b7fd7ebe51816f9c70efb9/script.js"
+          data-widget-uuid="67b7fd7ebe51816f9c70efb9"
+        ></script>
+        <script
+          defer
+          src="https://ec2-16-170-254-238.eu-north-1.compute.amazonaws.com/users/widgets/67adef513196b9f5e713e283/script.js"
+          data-widget-uuid="67adef513196b9f5e713e283"
+        ></script>
       </body>
     </html>
   );
