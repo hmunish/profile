@@ -66,6 +66,7 @@ export default function RootLayout({
           </button>
         </main>
         <script
+          defer
           src="https://ec2-16-170-254-238.eu-north-1.compute.amazonaws.com/users/widgets/684545472a2d2626857f17dd/script.js"
           data-widget-uuid="684545472a2d2626857f17dd"
         ></script>
